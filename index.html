@@ -201,7 +201,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Task and Environment Design</h2>
-        <h3 class="title is-4">Task Suite Shown through Policy Rollouts in Isaac Gym</h3>
+        <!-- <h3 class="title is-4">Task Suite Shown through Policy Rollouts in Isaac Gym</h3> -->
         <div class="content has-text-justified">
           <p>
             We design a suite of diverse manipulation tasks to systematically evaluate supervised visuotactile
@@ -212,6 +212,12 @@
       </div>
     </div>
     <!-- First row: videos 1,2,3 -->
+    <div class="content has-text-left" style="margin-bottom: 1rem;">
+      <h3 class="title is-4" style="margin-bottom: 0.5rem;">Tactile-based Manipulation Tasks</h3>
+      <p>
+        The following tasks require significant tactile sensing for successful manipulation. These examples demonstrate the importance of tactile feedback in challenging scenarios where vision alone is insufficient.
+      </p>
+    </div>
     <div class="columns">
       <div class="column">
         <div class="content has-text-centered">
@@ -242,6 +248,12 @@
       </div>
     </div>
     <!-- Second row: videos 4,5,6 -->
+     <div class="content has-text-left" style="margin-bottom: 1rem; margin-top: 2rem;">
+      <h3 class="title is-4" style="margin-bottom: 0.5rem;">Vision-based Manipulation Tasks</h3>
+      <p>
+        These tasks are primarily solved using visual feedback. They demonstrate scenarios where vision is sufficient for successful manipulation, highlighting the strengths and limitations of vision-only policies.
+      </p>
+    </div>
     <div class="columns">
       <div class="column">
         <div class="content has-text-centered">
@@ -272,6 +284,12 @@
       </div>
     </div>
     <!-- Third row: videos 7,8,9 -->
+     <div class="content has-text-left" style="margin-bottom: 1rem; margin-top: 2rem;">
+      <h3 class="title is-4" style="margin-bottom: 0.5rem;">Contact-rich Manipulation Tasks</h3>
+      <p>
+        These tasks involve complex, contact-rich interactions that require both visual and tactile feedback for successful completion. They showcase the advantages of visuotactile policies in challenging manipulation scenarios.
+      </p>
+    </div>
     <div class="columns">
       <div class="column">
         <div class="content has-text-centered">
@@ -320,13 +338,13 @@
           <div class="column">
             <h3 class="title is-5">15 <span style="color: orange;">Visuotactile</span> Policy Rollouts on the Normal light</h3>
             <video id="VisuotactileDimLight" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/vistac_nomal.mp4" type="video/mp4">
+              <source src="./static/videos/vistac_nomal_May18.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column">
             <h3 class="title is-5">15 Vision-only Policy Rollouts on the Normal light</h3>
             <video id="3DPoseDataCollection" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/vision_nomal_May17.mp4" type="video/mp4">
+              <source src="./static/videos/vision_nomal_May18.mp4" type="video/mp4">
             </video>
           </div>
         </div>
