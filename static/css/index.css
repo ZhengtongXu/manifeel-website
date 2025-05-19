@@ -12,6 +12,17 @@ body {
   color: var(--text-dark);
 }
 
+.hl-tactile {
+  color: #3F72AF; /* your main theme blue or indigo */
+  font-weight: 600;
+}
+
+.tag.hl {
+  background-color: #3F72AF;     /* your main theme indigo */
+  color: #fff;
+  font-weight: 500;
+}
+
 .hl {
   color: var(--highlight-dark);  /* Previously var(--highlight) */
   font-weight: 600;

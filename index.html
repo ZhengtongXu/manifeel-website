@@ -249,29 +249,42 @@ h1, h2, h3, h4, h5, h6 {
 
   <!-- Tactile-Augmented Policy -->
   <div class="content has-text-left" style="margin-top: 2rem;">
-    <h4 class="title is-5 has-text-centered"><span class="hl">Successful</span> Rollouts of Tactile-Augmented Policy</h4>
+    <h4 class="title is-5 has-text-centered">
+      <span class="hl">Successful</span> Rollouts of <span class="hl">Tactile</span>-augmented Policy
+    </h4>
   </div>
 
   <div class="columns">
     <div class="column">
       <div class="content has-text-centered">
-        <h5 class="title is-6">Blind Insertion <span class="hl">(Tactile)</span></h5>
+        <h5 class="title is-6">
+          Blind Insertion<br>
+          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
+        </h5>
         <video autoplay controls muted loop playsinline width="100%">
           <source src="./static/videos/blind_insertion_tactile.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
+
     <div class="column">
       <div class="content has-text-centered">
-        <h5 class="title is-6">Tactile Exploration <span class="hl">(Tactile)</span></h5>
+        <h5 class="title is-6">
+          Tactile Exploration<br>
+          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
+        </h5>
         <video autoplay controls muted loop playsinline width="100%">
           <source src="./static/videos/tactile_exp_tac_update.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
+
     <div class="column">
       <div class="content has-text-centered">
-        <h5 class="title is-6">Tactile Sorting <span class="hl">(Visuotactile)</span></h5>
+        <h5 class="title is-6">
+          Tactile Sorting<br>
+          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Low-Light Vision</span>
+        </h5>
         <video autoplay controls muted loop playsinline width="100%">
           <source src="./static/videos/Tac_sort_tac_update.mp4" type="video/mp4" />
         </video>
@@ -281,29 +294,40 @@ h1, h2, h3, h4, h5, h6 {
 
   <!-- Vision-Only Policy -->
   <div class="content has-text-left" style="margin-top: 3rem;">
-    <h4 class="title is-5 has-text-centered"><span class="hl">Unsuccessful</span> Rollouts of Vision-Only Policy</h4>
+    <h4 class="title is-5 has-text-centered"><span class="hl">Unsuccessful</span> Rollouts of <span class="hl">Vision</span>-only Policy</h4>
   </div>
 
   <div class="columns">
     <div class="column">
       <div class="content has-text-centered">
-        <h5 class="title is-6">Blind Insertion (Vision)</h5>
+        <h5 class="title is-6">
+          Blind Insertion<br>
+          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
+        </h5>
         <video autoplay controls muted loop playsinline width="100%">
           <source src="./static/videos/blind_insertion_vision.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
+
     <div class="column">
       <div class="content has-text-centered">
-        <h5 class="title is-6">Tactile Exploration (Vision)</h5>
+        <h5 class="title is-6">
+          Tactile Exploration<br>
+          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
+        </h5>
         <video autoplay controls muted loop playsinline width="100%">
           <source src="./static/videos/tactile_exp_vis.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
+
     <div class="column">
       <div class="content has-text-centered">
-        <h5 class="title is-6">Tactile Sorting (Vision)</h5>
+        <h5 class="title is-6">
+          Tactile Sorting<br>
+          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Low-Light Vision</span>
+        </h5>
         <video autoplay controls muted loop playsinline width="100%">
           <source src="./static/videos/Tac_sort_vis.mp4" type="video/mp4" />
         </video>
@@ -316,14 +340,22 @@ h1, h2, h3, h4, h5, h6 {
     <div class="content has-text-left" style="margin-top: 3rem;">
       <h3 class="title is-4 has-text-centered">Contact-Rich Manipulation</h3>
       <p class="has-text-justified">
-        These tasks involve complex, contact-rich interactions that require both visual and tactile feedback for successful execution. They highlight the strengths of visuotactile policies in challenging scenarios.
+        These tasks represent standardized assembly and insertion scenarios that are supported by our benchmark. 
+        They help identify key challenges in visual-tactile integration and highlight the potential of visuotactile policies in complex manipulation settings.
       </p>
+    </div>
+
+    <!-- Visuotactile Policy -->
+    <div class="content has-text-left" style="margin-top: 2rem;">
+      <h4 class="title is-5 has-text-centered">
+        <span class="hl">Successful</span> Rollouts of <span class="hl">Visuotactile</span> Policy
+      </h4>
     </div>
 
     <div class="columns">
       <div class="column">
         <div class="content has-text-centered">
-          <h4 class="title is-5">Gear Assembly <span class="hl">(Visuotactile)</span></h4>
+          <h5 class="title is-6">Gear Assembly</h5>
           <video autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/gear_assembly.mp4" type="video/mp4" />
           </video>
@@ -331,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       <div class="column">
         <div class="content has-text-centered">
-          <h4 class="title is-5">Power Plug <span class="hl">(Visuotactile)</span></h4>
+          <h5 class="title is-6">Power Plug Insertion</h5>
           <video autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/PowerPlugInsertion.mp4" type="video/mp4" />
           </video>
@@ -339,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       <div class="column">
         <div class="content has-text-centered">
-          <h4 class="title is-5">USB Insertion <span class="hl">(Visuotactile)</span></h4>
+          <h5 class="title is-6">USB Insertion</h5>
           <video autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/USBInsertion.mp4" type="video/mp4" />
           </video>
