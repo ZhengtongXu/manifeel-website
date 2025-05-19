@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
           <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
         </h5>
         <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/blind_insertion_tactile.mp4" type="video/mp4" />
+          <source src="./static/videos/blind_insertion_tactile_May19_updated.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
           <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
         </h5>
         <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/tactile_exp_tac_update.mp4" type="video/mp4" />
+          <source src="./static/videos/tactile_exp_May19.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -286,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
           <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Low-Light Vision</span>
         </h5>
         <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/Tac_sort_tac_update.mp4" type="video/mp4" />
+          <source src="./static/videos/Tac_sort_tac_May19.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -305,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
           <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
         </h5>
         <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/blind_insertion_vision.mp4" type="video/mp4" />
+          <source src="./static/videos/blind_insertion_vision_May19.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
           <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
         </h5>
         <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/tactile_exp_vis.mp4" type="video/mp4" />
+          <source src="./static/videos/tactile_exp_vis_May19.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
           <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Low-Light Vision</span>
         </h5>
         <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/Tac_sort_vis.mp4" type="video/mp4" />
+          <source src="./static/videos/Tac_sort_vis_May19.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -429,6 +429,42 @@ h1, h2, h3, h4, h5, h6 {
               <h5 class="title is-6">Vision-only Policy Rollouts</h5>
               <video autoplay muted loop playsinline width="100%">
                 <source src="./static/videos/vision_dim.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Failure Cases -->
+        <div class="content has-text-centered" style="margin-top: 3rem;">
+          <h4 class="title is-5">Failure Cases</h4>
+          <p style="margin-bottom: 1.5rem;">
+            Some failure cases in the Visuotactile Policy rollout are caused by the Panda robot's underlying controller overshooting—while the ball is correctly identified, it is sometimes placed outside the bowl. In the Vision-only Policy rollouts, typical failures include the inability to sort the golf ball or the gripper knocking the ball out of the base due to incorrect positioning during grasping.
+          </p>
+          <div class="columns is-centered">
+            <div class="column">
+              <h5 class="title is-6"><span class="hl">Visuotactile</span> Policy Rollouts</h5>
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vistac_normal_f2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <h5 class="title is-6">Vision-only Policy Rollouts</h5>
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vision_normal_f1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered" style="margin-top: 0.5rem;">
+            <div class="column">
+              <!-- <h5 class="title is-6"><span class="hl">Visuotactile</span> Policy Rollouts</h5> -->
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vistac_dim_f1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <!-- <h5 class="title is-6">Vision-only Policy Rollouts</h5> -->
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vision_dim_f1.mp4" type="video/mp4">
               </video>
             </div>
           </div>
