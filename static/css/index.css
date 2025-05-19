@@ -1,7 +1,41 @@
-body {
-  font-family: 'Noto Sans', sans-serif;
+:root {
+  --highlight: #3F72AF;        /* Indigo Blue */
+  --highlight-light: #DBE2EF;
+  --highlight-dark: #112D4E;
+  --text-dark: #222;
+  --background: #F9F7F7;
 }
 
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+.hl {
+  color: var(--highlight-dark);  /* Previously var(--highlight) */
+  font-weight: 600;
+}
+
+a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight-dark);
+  text-decoration: underline;
+}
+
+.button.is-dark {
+  background-color: var(--highlight-dark);
+  border-color: var(--highlight-dark);
+}
+
+.button.is-dark:hover {
+  background-color: var(--highlight);
+  border-color: var(--highlight);
+}
 
 .footer .icon-link {
     font-size: 25px;
@@ -17,7 +51,6 @@ body {
   font-variant: small-caps;
 }
 
-
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
@@ -27,13 +60,12 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-
 .publication-title {
+    font-family: 'Google Sans', sans-serif;
 }
 
 .publication-banner {
   max-height: parent;
-
 }
 
 .publication-banner video {
@@ -45,10 +77,6 @@ body {
 }
 
 .publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
@@ -67,11 +95,8 @@ body {
     font-weight: bolder;
 }
 
-.publication-authors {
-}
-
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+   color: var(--highlight) !important;
 }
 
 .publication-authors a:hover {
@@ -85,16 +110,11 @@ body {
 .publication-banner img {
 }
 
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
 .publication-video {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-
     overflow: hidden;
     border-radius: 10px !important;
 }
@@ -127,7 +147,6 @@ body {
   margin: 0;
 }
 
-
 .interpolation-panel {
   background: #f5f5f5;
   border-radius: 10px;
@@ -145,13 +164,10 @@ body {
   margin: 0 !important;
 }
 
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
 #interpolation-image-wrapper {
   width: 100%;
 }
+
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
