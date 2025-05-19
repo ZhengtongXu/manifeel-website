@@ -182,239 +182,247 @@ h1, h2, h3, h4, h5, h6 {
 <!--/ Abstract. -->
 </div>
 </section>
+
 <section class="section">
-<div class="container is-max-desktop">
-<div class="columns is-centered">
-<div class="column is-full-width">
-<h2 class="title is-3">Reactive Experiments</h2>
-<!-- <h3 class="title is-4 has-text-centered">Visuotactile vs. Vision-only Policy</h3> -->
-<div class="content has-text-justified">
-<p>
-  We evaluate visuotactile and vision-only policies in a real-world tactile sorting task, where the robot must differentiate between two visually similar objects—a table tennis ball and a golf ball—and place them in the yellow and red bowls, respectively.
-</p>
-<p>
-  During roll-outs with human disturbances, the visuotactile policy shows robust tactile reactivity. When the grasped ball is removed, the robot actively searches for it and continues the task.
-</p>
-<p>
-  In contrast, the vision-only policy lacks this adaptive behavior and fails to recover from such interruptions.
-</p>
-</div>
-<div class="columns">
-<div class="column">
-<div class="content has-text-centered">
-<h3 class="title is-5"><span class="hl">Visuotactile</span></h3>
-<video controls="" id="ReactiveVisuotactile" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/Visuotactile_May17.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-              </video>
-</div>
-</div>
-<div class="column">
-<div class="content has-text-centered">
-<h3 class="title is-5">Vision-only</h3>
-<video controls="" id="ReactiveVision" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/Vision_May17.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-              </video>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container is-max-desktop">
-<div class="columns is-centered">
-<div class="column is-full-width">
-<h2 class="title is-3">ManiFeel Benchmark: Tasks and Policy Rollouts in Simulation</h2>
-<!-- <h3 class="title is-4">Task Suite Shown through Policy Rollouts in Isaac Gym</h3> -->
-<div class="content has-text-justified">
-<p>
-            We design a suite of diverse manipulation tasks to systematically evaluate supervised visuotactile
-            policy learning under varying sensory conditions. The tasks are grouped into six categories,
-            reflecting different levels of reliance on visual and tactile modalities.
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Reactive Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate visuotactile and vision-only policies in a real-world tactile sorting task.
+            The robot must distinguish between two visually similar objects—a table tennis ball and a golf ball—and place them into designated bowls.
           </p>
-</div>
-</div>
-</div>
-<!-- First row: videos 1,2,3 -->
-<div class="content has-text-left" style="margin-bottom: 1rem;">
-<h3 class="title is-4 has-text-centered" style="margin-bottom: 0.5rem;">
-  <span class="hl">Successful</span> Rollouts of Tactile-Augmented Policy
-</h3>
-<p>
-  The following tasks require significant tactile sensing for successful manipulation. These examples demonstrate the importance of tactile feedback in challenging scenarios where vision alone is insufficient.
-</p>
-</div>
-<div class="columns">
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Blind Insertion <span class="hl">(Tactile)</span></h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/blind_insertion_tactile.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
-</div>
-</div>
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Tactile Exploration <span class="hl">(Tactile)</span></h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/tactile_exp_tac_update.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
-</div>
-</div>
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Tactile Sorting <span class="hl">(Visuotactile)</span></h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/Tac_sort_tac_update.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
-</div>
-</div>
-</div>
-<!-- Second row: videos 4,5,6 -->
-<div class="content has-text-left" style="margin-bottom: 1rem; margin-top: 2rem;">
-<h3 class="title is-4 has-text-centered" style="margin-bottom: 0.5rem;">
-  <span class="hl">Unsuccessful</span> Rollouts of Vision-Only Policy
-</h3>
-<p>
-  These tasks are primarily solved using visual feedback. They demonstrate scenarios where vision is sufficient for successful manipulation, highlighting the strengths and limitations of vision-only policies.
-</p>
-</div>
-<div class="columns">
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Blind Insertion (Vision)</h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/blind_insertion_vision.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
-</div>
-</div>
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Tactile Exploration (Vision)</h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/tactile_exp_vis.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
-</div>
-</div>
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Tactile Sorting (Vision)</h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/Tac_sort_vis.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
-</div>
-</div>
-</div>
-<!-- Third row: videos 7,8,9 -->
-<div class="content has-text-left" style="margin-bottom: 1rem; margin-top: 2rem;">
-<h3 class="title is-4" style="margin-bottom: 0.5rem;">Contact-rich Manipulation Tasks</h3>
-<p>
-        These tasks involve complex, contact-rich interactions that require both visual and tactile feedback for successful completion. They showcase the advantages of visuotactile policies in challenging manipulation scenarios.
+          <p>
+            Under human disturbances during roll-outs, the visuotactile policy demonstrates adaptive behavior:
+            when a ball is removed, the robot detects the loss and actively re-initiates the search.
+            In contrast, the vision-only policy fails to respond and cannot recover.
+          </p>
+        </div>
+
+        <div class="columns" style="margin-top: 2rem;">
+          <div class="column">
+            <div class="content has-text-centered">
+              <h3 class="title is-5"><span class="hl">Visuotactile</span></h3>
+              <video id="ReactiveVisuotactile" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/Visuotactile_May17.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content has-text-centered">
+              <h3 class="title is-5">Vision-only</h3>
+              <video id="ReactiveVision" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/Vision_May17.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">ManiFeel Benchmark: Tasks and Policy Rollouts in Simulation</h2>
+        <div class="content has-text-justified">
+          <p>
+            We design a diverse suite of manipulation tasks to systematically evaluate supervised visuotactile policy learning under varying sensory conditions.
+            The tasks are grouped into six categories, reflecting different levels of reliance on visual and tactile modalities.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Successful Tactile Tasks -->
+    <div class="content has-text-left" style="margin-top: 2rem;">
+      <h3 class="title is-4 has-text-centered"><span class="hl">Successful</span> Rollouts of Tactile-Augmented Policy</h3>
+      <p class="has-text-justified">
+        These tasks require strong tactile sensing for successful manipulation. They demonstrate how tactile feedback enables robust behavior in challenging scenarios where visual input alone is insufficient.
       </p>
-</div>
-<div class="columns">
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Gear Assembly <span class="hl">(Visuotactile)</span></h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/gear_assembly.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Blind Insertion <span class="hl">(Tactile)</span></h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/blind_insertion_tactile.mp4" type="video/mp4" />
           </video>
-</div>
-</div>
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">Power Plug <span class="hl">(Visuotactile)</span></h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/PowerPlugInsertion.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
+        </div>
+      </div>
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Tactile Exploration <span class="hl">(Tactile)</span></h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/tactile_exp_tac_update.mp4" type="video/mp4" />
           </video>
-</div>
-</div>
-<div class="column">
-<div class="content has-text-centered">
-<h2 class="title is-5">USB Insertion <span class="hl">(Visuotactile)</span></h2>
-<video autoplay="" controls="" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/USBInsertion.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
+        </div>
+      </div>
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Tactile Sorting <span class="hl">(Visuotactile)</span></h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/Tac_sort_tac_update.mp4" type="video/mp4" />
           </video>
-</div>
-</div>
-</div>
-</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unsuccessful Vision Tasks -->
+    <div class="content has-text-left" style="margin-top: 3rem;">
+      <h3 class="title is-4 has-text-centered"><span class="hl">Unsuccessful</span> Rollouts of Vision-Only Policy</h3>
+      <p class="has-text-justified">
+        These tasks are primarily solved using visual feedback. They illustrate limitations of vision-only policies in environments where tactile feedback is essential.
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Blind Insertion (Vision)</h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/blind_insertion_vision.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Tactile Exploration (Vision)</h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/tactile_exp_vis.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Tactile Sorting (Vision)</h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/Tac_sort_vis.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact-rich Tasks -->
+    <div class="content has-text-left" style="margin-top: 3rem;">
+      <h3 class="title is-4 has-text-centered">Contact-Rich Manipulation Tasks</h3>
+      <p class="has-text-justified">
+        These tasks involve complex, contact-rich interactions that require both visual and tactile feedback for successful execution. They highlight the strengths of visuotactile policies in challenging scenarios.
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Gear Assembly <span class="hl">(Visuotactile)</span></h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/gear_assembly.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">Power Plug <span class="hl">(Visuotactile)</span></h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/PowerPlugInsertion.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4 class="title is-5">USB Insertion <span class="hl">(Visuotactile)</span></h4>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/USBInsertion.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="section">
-<div class="container is-max-desktop">
-<div class="columns is-centered">
-<div class="column is-full-width">
-<h2 class="title is-3"> Rollout in Real word Experiment</h2>
-<h3 class="title is-4">Policy Rollouts on the Differrent Light Conditions for Tactile Sorting Task</h3>
-<div class="content has-text-justified">
-<p>
-            We show the effectiveness of Visuotactile policy on a different light condition. For more details of this experiment. please refer to our paper.
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Real-World Policy Rollouts</h2>
+        <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
+          Performance Under Varying Lighting Conditions in Tactile Sorting
+        </h3>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate the effectiveness of visuotactile and vision-only policies under different lighting conditions in a real-world tactile sorting task.
+            The robot must distinguish between two visually similar objects—a table tennis ball and a golf ball—and place them into the correct target bowls.
+            Please refer to our paper for detailed results.
           </p>
-</div>
-<div class="content has-text-centered">
-<div class="columns is-centered">
-<div class="column">
-<h3 class="title is-5">15 <span class="hl">Visuotactile</span> Policy Rollouts on the Normal light</h3>
-<video autoplay="" controls="" id="VisuotactileDimLight" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/vistac_nomal_May18.mp4" type="video/mp4"/>
-</video>
-</div>
-<div class="column">
-<h3 class="title is-5">15 Vision-only Policy Rollouts on the Normal light</h3>
-<video autoplay="" controls="" id="3DPoseDataCollection" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/vision_nomal_May18.mp4" type="video/mp4"/>
-</video>
-</div>
-</div>
-<div class="columns is-centered" style="margin-top: 2rem;">
-<div class="column">
-<h3 class="title is-5">15 <span class="hl">Visuotactile</span> Policy Rollouts on the Dim light</h3>
-<video autoplay="" controls="" id="VisuotactileDimLight" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/vistac_dim.mp4" type="video/mp4"/>
-</video>
-</div>
-<div class="column">
-<h3 class="title is-5">15 Vision-only Policy Rollouts on the Dim light</h3>
-<video autoplay="" controls="" id="3DPoseDataCollection" loop="" muted="" playsinline="" width="100%">
-<source src="./static/videos/vision_dim.mp4" type="video/mp4"/>
-</video>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div></section>
+        </div>
+
+        <!-- Normal Light Rollouts -->
+        <div class="content has-text-centered" style="margin-top: 2rem;">
+          <h4 class="title is-5">Normal Lighting</h4>
+          <div class="columns is-centered">
+            <div class="column">
+              <h5 class="title is-6"><span class="hl">Visuotactile</span> Policy Rollouts</h5>
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vistac_nomal_May18.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <h5 class="title is-6">Vision-only Policy Rollouts</h5>
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vision_nomal_May18.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dim Light Rollouts -->
+        <div class="content has-text-centered" style="margin-top: 3rem;">
+          <h4 class="title is-5">Dim Lighting</h4>
+          <div class="columns is-centered">
+            <div class="column">
+              <h5 class="title is-6"><span class="hl">Visuotactile</span> Policy Rollouts</h5>
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vistac_dim.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <h5 class="title is-6">Vision-only Policy Rollouts</h5>
+              <video autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/vision_dim.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section">
-<div class="container is-max-desktop">
-<div class="columns is-centered">
-<div class="column is-full-width">
-<h2 class="title is-3">Comparing TacSL Simulator and GelSight Mini Outputs</h2>
-<h3 class="title is-4"></h3>
-<div class="content has-text-justified">
-<p>
-            Comparison between tactile images in TacSL simulator and those generated by GelSight Mini. We present examples featuring several objects included in the ManiFeel benchmark.
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Sim-to-Real Comparison: TacSL Simulator vs. GelSight Mini</h2>
+        
+        <div class="content has-text-justified">
+          <p>
+            We compare tactile images generated in the TacSL simulator with those captured using the GelSight Mini sensor.
+            The examples below feature several representative objects from the ManiFeel benchmark and demonstrate the visual and structural similarities between simulated and real tactile feedback.
           </p>
-</div>
-<div class="content has-text-centered">
-<figure class="image">
-<img alt="datacollection" src="./static/images/Fig2.png"/>
-</figure>
-</div>
-</div>
-</div>
-</div>
+        </div>
+        
+        <div class="has-text-centered" style="margin-top: 2rem;">
+          <figure class="image is-fullwidth" style="max-width: 100%;">
+            <img src="./static/images/Fig2.png" alt="TacSL Simulator vs. GelSight Mini" style="width: 100%; height: auto;">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="section">
 <div class="container is-max-desktop">
