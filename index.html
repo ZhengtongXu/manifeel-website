@@ -434,41 +434,54 @@ h1, h2, h3, h4, h5, h6 {
           </div>
         </div>
 
-        <!-- Failure Cases -->
-        <div class="content has-text-centered" style="margin-top: 3rem;">
-          <h4 class="title is-5">Failure Cases</h4>
-          <p style="margin-bottom: 1.5rem;">
-            Some failure cases in the Visuotactile Policy rollout are caused by the Panda robot's underlying controller overshooting—while the ball is correctly identified, it is sometimes placed outside the bowl. In the Vision-only Policy rollouts, typical failures include the inability to sort the golf ball or the gripper knocking the ball out of the base due to incorrect positioning during grasping.
-          </p>
-          <div class="columns is-centered">
-            <div class="column">
-              <h5 class="title is-6"><span class="hl">Visuotactile</span> (Normal Lighting)</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vistac_normal_f2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="column">
-              <h5 class="title is-6">Vision-only (Normal Lighting)</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vision_normal_f3.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="columns is-centered" style="margin-top: 0.5rem;">
-            <div class="column">
-              <h5 class="title is-6"><span class="hl">Visuotactile</span> (Dim Lighting)</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vistac_dim_f1.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="column">
-              <h5 class="title is-6">Vision-only (Dim Lighting)</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vision_dim_f3.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
+  <!-- Failure Cases -->
+  <div class="content" style="margin-top: 3rem;">
+    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">Failure Cases</h2>
+    <div class="container is-max-desktop">
+      <p class="has-text-justified" style="margin-bottom: 2rem;">
+        Failure cases in the visuotactile policy often stem from controller overshoot; although the object is correctly identified, it may be dropped slightly outside the target bowl. 
+        In comparison, the vision-only policy frequently fails due to poor grasp positioning, causing the object to miss the bowl or fall off the base. 
+        Below are examples under both normal and dim lighting conditions.
+      </p>
+
+      <!-- Normal Lighting -->
+      <div class="columns is-vcentered">
+        <div class="column has-text-centered">
+          <h5 class="title is-6"><span class="hl">Visuotactile</span> (Normal Lighting)</h5>
+          <p class="is-size-6 has-text-grey">Ball Bounced Off Bowl</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/vistac_normal_f2.mp4" type="video/mp4">
+          </video>
         </div>
+        <div class="column has-text-centered">
+          <h5 class="title is-6">Vision-only (Normal Lighting)</h5>
+          <p class="is-size-6 has-text-grey">Incomplete Placement</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/vision_normal_f3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Dim Lighting -->
+      <div class="columns is-vcentered" style="margin-top: 1.5rem;">
+        <div class="column has-text-centered">
+          <h5 class="title is-6"><span class="hl">Visuotactile</span> (Dim Lighting)</h5>
+          <p class="is-size-6 has-text-grey">Overshoot in Low Visibility</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/vistac_dim_f1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <h5 class="title is-6">Vision-only (Dim Lighting)</h5>
+          <p class="is-size-6 has-text-grey">Incorrect Placement</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/vision_dim_f3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
       </div>
     </div>
