@@ -403,24 +403,24 @@ h1, h2, h3, h4, h5, h6 {
           <div class="tabs is-toggle is-centered" style="margin-bottom: 0;">
             <ul id="normal-tabs">
               <li class="is-active" data-tab="normal-vt">
-                <a href="javascript:void(0);">
-                  Visuotactile Policy Rollouts <span class="tag is-success" style="margin-left: 0.5em;">13/15</span>
-                </a>
+          <a href="javascript:void(0);">
+            Visuotactile Policy Rollouts <span class="tag is-success" style="margin-left: 0.5em;">13/15</span>
+          </a>
               </li>
               <li data-tab="normal-vo">
-                <a href="javascript:void(0);">
-                  Vision-only Policy Rollouts <span class="tag is-warning" style="margin-left: 0.5em;">5/15</span>
-                </a>
+          <a href="javascript:void(0);">
+            Vision-only Policy Rollouts <span class="tag is-warning" style="margin-left: 0.5em;">5/15</span>
+          </a>
               </li>
             </ul>
           </div>
           <div id="normal-vt" class="tab-content">
             <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.25em;">
-                <span class="hl">Visuotactile</span> Policy Rollouts
+              <h5 class="title is-6" style="margin-bottom: 0.5em;">
+          <span class="hl">Visuotactile</span> Policy Rollouts
               </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
-                Success Rate: <span class="hl">13/15</span>
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
+          Success Rate: <span class="hl">13/15</span>
               </p>
             </div>
             <video autoplay muted loop playsinline width="100%">
@@ -429,11 +429,11 @@ h1, h2, h3, h4, h5, h6 {
           </div>
           <div id="normal-vo" class="tab-content is-hidden">
             <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.25em;">
-                Vision-only Policy Rollouts
+              <h5 class="title is-6" style="margin-bottom: 0.5em;">
+          Vision-only Policy Rollouts
               </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
-                Success Rate: <span class="hl">5/15</span>
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
+          Success Rate: <span class="hl">5/15</span>
               </p>
             </div>
             <video autoplay muted loop playsinline width="100%">
@@ -444,11 +444,11 @@ h1, h2, h3, h4, h5, h6 {
             // Tabs for Normal Lighting Rollouts
             document.querySelectorAll('#normal-tabs li').forEach(tab => {
               tab.addEventListener('click', function() {
-                document.querySelectorAll('#normal-tabs li').forEach(t => t.classList.remove('is-active'));
-                document.getElementById('normal-vt').classList.add('is-hidden');
-                document.getElementById('normal-vo').classList.add('is-hidden');
-                tab.classList.add('is-active');
-                document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
+          document.querySelectorAll('#normal-tabs li').forEach(t => t.classList.remove('is-active'));
+          document.getElementById('normal-vt').classList.add('is-hidden');
+          document.getElementById('normal-vo').classList.add('is-hidden');
+          tab.classList.add('is-active');
+          document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
               });
             });
           </script>
@@ -473,10 +473,10 @@ h1, h2, h3, h4, h5, h6 {
           </div>
           <div id="dim-vt" class="tab-content">
             <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.25em;">
+              <h5 class="title is-6" style="margin-bottom: 0.5em;">
           <span class="hl">Visuotactile</span> Policy Rollouts
               </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
           Success Rate: <span class="hl">5/15</span>
               </p>
             </div>
@@ -486,10 +486,10 @@ h1, h2, h3, h4, h5, h6 {
           </div>
           <div id="dim-vo" class="tab-content is-hidden">
             <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.25em;">
+              <h5 class="title is-6" style="margin-bottom: 0.5em;">
           Vision-only Policy Rollouts
               </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
           Success Rate: <span class="hl">1/15</span>
               </p>
             </div>
