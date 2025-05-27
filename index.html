@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 <div class="publication-links">
 <!-- PDF Link. -->
 <span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="https://drive.google.com/file/d/1IRXA-RWtJBOWkVkrfcg_d8aJbo61BAX6/view?usp=sharing">
+<a class="external-link button is-normal is-rounded is-dark" href="https://www.arxiv.org/pdf/2505.18472">
 <span class="icon">
 <i class="ai ai-arxiv"></i>
 </span>
@@ -399,88 +399,217 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Normal Light Rollouts -->
         <div class="content has-text-centered" style="margin-top: 2rem;">
           <h4 class="title is-5">Normal Lighting</h4>
-          <div class="columns is-centered">
-            <div class="column">
-              <h5 class="title is-6"><span class="hl">Visuotactile</span> Policy Rollouts</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vistac_nomal_May18.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="column">
-              <h5 class="title is-6">Vision-only Policy Rollouts</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vision_nomal_May18.mp4" type="video/mp4">
-              </video>
-            </div>
+          <!-- Tabs for Normal Lighting Rollouts -->
+          <div class="tabs is-toggle is-centered" style="margin-bottom: 0;">
+            <ul id="normal-tabs">
+              <li class="is-active" data-tab="normal-vt">
+                <a href="javascript:void(0);">
+                  Visuotactile Policy Rollouts <span class="tag is-success" style="margin-left: 0.5em;">13/15</span>
+                </a>
+              </li>
+              <li data-tab="normal-vo">
+                <a href="javascript:void(0);">
+                  Vision-only Policy Rollouts <span class="tag is-warning" style="margin-left: 0.5em;">5/15</span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
+          <div id="normal-vt" class="tab-content">
+            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
+              <h5 class="title is-6" style="margin-bottom: 0.25em;">
+                <span class="hl">Visuotactile</span> Policy Rollouts
+              </h5>
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
+                Success Rate: <span class="hl">13/15</span>
+              </p>
+            </div>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/vistac_nomal_May18.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div id="normal-vo" class="tab-content is-hidden">
+            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
+              <h5 class="title is-6" style="margin-bottom: 0.25em;">
+                Vision-only Policy Rollouts
+              </h5>
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
+                Success Rate: <span class="hl">5/15</span>
+              </p>
+            </div>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/vision_nomal_May18.mp4" type="video/mp4">
+            </video>
+          </div>
+          <script>
+            // Tabs for Normal Lighting Rollouts
+            document.querySelectorAll('#normal-tabs li').forEach(tab => {
+              tab.addEventListener('click', function() {
+                document.querySelectorAll('#normal-tabs li').forEach(t => t.classList.remove('is-active'));
+                document.getElementById('normal-vt').classList.add('is-hidden');
+                document.getElementById('normal-vo').classList.add('is-hidden');
+                tab.classList.add('is-active');
+                document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
+              });
+            });
+          </script>
 
         <!-- Dim Light Rollouts -->
         <div class="content has-text-centered" style="margin-top: 3rem;">
           <h4 class="title is-5">Dim Lighting</h4>
-          <div class="columns is-centered">
-            <div class="column">
-              <h5 class="title is-6"><span class="hl">Visuotactile</span> Policy Rollouts</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vistac_dim.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="column">
-              <h5 class="title is-6">Vision-only Policy Rollouts</h5>
-              <video autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/vision_dim.mp4" type="video/mp4">
-              </video>
-            </div>
+          <!-- Tabs for Dim Lighting Rollouts -->
+          <div class="tabs is-toggle is-centered" style="margin-bottom: 0;">
+            <ul id="dim-tabs">
+              <li class="is-active" data-tab="dim-vt">
+          <a href="javascript:void(0);">
+            Visuotactile Policy Rollouts <span class="tag is-success" style="margin-left: 0.5em;">5/15</span>
+          </a>
+              </li>
+              <li data-tab="dim-vo">
+          <a href="javascript:void(0);">
+            Vision-only Policy Rollouts <span class="tag is-warning" style="margin-left: 0.5em;">1/15</span>
+          </a>
+              </li>
+            </ul>
           </div>
-        </div>
+          <div id="dim-vt" class="tab-content">
+            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
+              <h5 class="title is-6" style="margin-bottom: 0.25em;">
+          <span class="hl">Visuotactile</span> Policy Rollouts
+              </h5>
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
+          Success Rate: <span class="hl">5/15</span>
+              </p>
+            </div>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/vistac_dim.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div id="dim-vo" class="tab-content is-hidden">
+            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
+              <h5 class="title is-6" style="margin-bottom: 0.25em;">
+          Vision-only Policy Rollouts
+              </h5>
+              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: -0.5em;">
+          Success Rate: <span class="hl">1/15</span>
+              </p>
+            </div>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/vision_dim.mp4" type="video/mp4">
+            </video>
+          </div>
+          <script>
+            // Tabs for Dim Lighting Rollouts
+            document.querySelectorAll('#dim-tabs li').forEach(tab => {
+              tab.addEventListener('click', function() {
+          document.querySelectorAll('#dim-tabs li').forEach(t => t.classList.remove('is-active'));
+          document.getElementById('dim-vt').classList.add('is-hidden');
+          document.getElementById('dim-vo').classList.add('is-hidden');
+          tab.classList.add('is-active');
+          document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
+              });
+            });
+          </script>
 
-  <!-- Failure Cases -->
-  <div class="content" style="margin-top: 3rem;">
-    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">Failure Cases</h2>
-    <div class="container is-max-desktop">
-      <p class="has-text-justified" style="margin-bottom: 2rem;">
-        Failure cases in the visuotactile policy often stem from controller overshoot; although the object is correctly identified, it may be dropped slightly outside the target bowl. 
-        In contrast, due to the absence of tactile feedback, the vision-only policy frequently misidentifies the object or fails to determine the correct placement location, resulting in incorrect sorting.
-      </p>
+<!-- Failure Cases -->
+<section class="section" id="failures">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Failure Cases</h2>
+    <p class="has-text-justified" style="margin-bottom: 2rem;">
+      Failure cases in the visuotactile policy often stem from controller overshoot—although the object is correctly identified, it may be dropped slightly outside the target bowl. 
+      In contrast, due to the absence of tactile feedback, the vision-only policy frequently misidentifies the object or fails to determine the correct placement location, resulting in incorrect sorting.
+    </p>
 
-      <!-- Normal Lighting -->
-      <div class="columns is-vcentered">
-        <div class="column has-text-centered">
-          <h5 class="title is-6"><span class="hl">Visuotactile</span> (Normal Lighting)</h5>
-          <p class="is-size-6 has-text-grey">Ball Bounced Off Bowl</p>
-          <video autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/vistac_normal_f2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column has-text-centered">
-          <h5 class="title is-6">Vision-only (Normal Lighting)</h5>
-          <p class="is-size-6 has-text-grey">Incomplete Placement</p>
-          <video autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/vision_normal_f3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- Dim Lighting -->
-      <div class="columns is-vcentered" style="margin-top: 1.5rem;">
-        <div class="column has-text-centered">
-          <h5 class="title is-6"><span class="hl">Visuotactile</span> (Dim Lighting)</h5>
-          <p class="is-size-6 has-text-grey">Overshoot in Low Visibility</p>
-          <video autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/vistac_dim_f1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column has-text-centered">
-          <h5 class="title is-6">Vision-only (Dim Lighting)</h5>
-          <p class="is-size-6 has-text-grey">Incorrect Placement</p>
-          <video autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/vision_dim_f3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
+    <!-- Tabs for Visuotactile -->
+    <h3 class="title is-5">Visuotactile Failures</h3>
+    <style>
+      /* Custom tab styles to match the site theme */
+      .tabs.is-toggle li.is-active a {
+      background-color: var(--highlight-dark);
+      color: #fff !important;
+      border-color: var(--highlight-dark) !important;
+      }
+      .tabs.is-toggle li a {
+      background-color: var(--highlight-light);
+      color: var(--highlight-dark);
+      border-color: var(--highlight-light);
+      transition: background 0.2s, color 0.2s;
+      }
+      .tabs.is-toggle li:not(.is-active) a:hover {
+      background-color: var(--highlight);
+      color: #fff;
+      }
+      .tabs.is-toggle ul {
+      border-bottom: none;
+      }
+      .tabs.is-toggle li {
+      margin-bottom: 0;
+      }
+    </style>
+    <div class="tabs is-toggle is-centered">
+      <ul id="vt-tabs">
+      <li class="is-active" data-tab="vt1"><a href="javascript:void(0);">Ball Bounced Off Bowl</a></li>
+      <li data-tab="vt2"><a href="javascript:void(0);">Off-Target Placement</a></li>
+      </ul>
     </div>
-  </div>
+    <div id="vt1" class="tab-content">
+      <p class="has-text-grey has-text-centered is-size-6">Normal Lighting</p>
+      <video autoplay muted loop playsinline width="100%">
+      <source src="./static/videos/vistac_normal_f2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div id="vt2" class="tab-content is-hidden">
+      <p class="has-text-grey has-text-centered is-size-6">Dim Lighting</p>
+      <video autoplay muted loop playsinline width="100%">
+      <source src="./static/videos/vistac_dim_f1.mp4" type="video/mp4">
+      </video>
+    </div>
 
+    <!-- Tabs for Vision-only -->
+    <h3 class="title is-5" style="margin-top: 2rem;">Vision-only Failures</h3>
+    <div class="tabs is-toggle is-centered">
+      <ul id="vo-tabs">
+      <li class="is-active" data-tab="vo1"><a href="javascript:void(0);">Incomplete Placement</a></li>
+      <li data-tab="vo2"><a href="javascript:void(0);">Incorrect Placement</a></li>
+      </ul>
+    </div>
+    <div id="vo1" class="tab-content" style="background-color: var(--background);">
+      <p class="has-text-grey has-text-centered is-size-6">Normal Lighting</p>
+      <video autoplay muted loop playsinline width="100%">
+      <source src="./static/videos/vision_normal_f3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div id="vo2" class="tab-content is-hidden" style="background-color: var(--background);">
+      <p class="has-text-grey has-text-centered is-size-6">Dim Lighting</p>
+      <video autoplay muted loop playsinline width="100%">
+      <source src="./static/videos/vision_dim_f3.mp4" type="video/mp4">
+      </video>
+    </div>
+    </div>
+
+    <script>
+    // Visuotactile tabs
+    document.querySelectorAll('#vt-tabs li').forEach(tab => {
+      tab.addEventListener('click', function() {
+      document.querySelectorAll('#vt-tabs li').forEach(t => t.classList.remove('is-active'));
+      document.getElementById('vt1').classList.add('is-hidden');
+      document.getElementById('vt2').classList.add('is-hidden');
+      tab.classList.add('is-active');
+      document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
+      });
+    });
+
+    // Vision-only tabs
+    document.querySelectorAll('#vo-tabs li').forEach(tab => {
+      tab.addEventListener('click', function() {
+      document.querySelectorAll('#vo-tabs li').forEach(t => t.classList.remove('is-active'));
+      document.getElementById('vo1').classList.add('is-hidden');
+      document.getElementById('vo2').classList.add('is-hidden');
+      tab.classList.add('is-active');
+      document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
+      });
+    });
+    </script>
+  </section>
 
       </div>
     </div>
@@ -526,12 +655,20 @@ h1, h2, h3, h4, h5, h6 {
 </div>
 </section>
 <section class="section" id="BibTeX">
-<div class="container is-max-desktop content">
-<h2 class="title">BibTeX</h2>
-<pre><code>                    
-
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@misc{luu2025manifeelbenchmarkingunderstandingvisuotactile,
+  title        = {ManiFeel: Benchmarking and Understanding Visuotactile Manipulation Policy Learning},
+  author       = {Quan Khanh Luu and Pokuang Zhou and Zhengtong Xu and Zhiyuan Zhang and Qiang Qiu and Yu She},
+  year         = {2025},
+  eprint       = {2505.18472},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url          = {https://arxiv.org/abs/2505.18472}
+}
     </code></pre>
-</div>
+  </div>
 </section>
 <footer class="footer">
 <div class="container">
