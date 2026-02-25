@@ -119,9 +119,31 @@ h1, h2, h3, h4, h5, h6 {
 </div>
 <div class="column has-text-centered">
 <div class="publication-links">
+
+<!-- Autonomous Policy Rollout Videos -->
+<div class="content has-text-centered" style="margin-bottom: 2.5rem; margin-top: 1.5rem;">
+  <div class="columns is-centered">
+    <div class="column">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="sim-video-label" style="font-size:1em; font-weight:600; color:#222; margin-bottom:0.5em;">Gear Assembly Autonomous Rollout</div>
+          <video autoplay muted loop playsinline controls width="960" style="width:960px; height:auto; display:block; margin:auto; border-radius:12px; box-shadow:0 2px 12px #bbb; object-fit:contain;">
+            <source src="./static/new_videos/real/gear/gear_thumbnail_4x_cropped.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column">
+          <div class="sim-video-label" style="font-size:1em; font-weight:600; color:#222; margin-bottom:0.5em;">Bulb Screwing Autonomous Rollout</div>
+          <video autoplay muted loop playsinline controls width="960" style="width:960px; height:auto; display:block; margin:auto; border-radius:12px; box-shadow:0 2px 12px #bbb; object-fit:contain;">
+            <source src="./static/new_videos/real/bulb/bulb_thumbnail_4x_tmp_4x3_rightbottom.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- PDF Link. -->
 <span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="https://www.arxiv.org/pdf/2505.18472">
+<a class="external-link button is-normal is-rounded is-dark" href="https://arxiv.org/abs/2505.18472">
 <span class="icon">
 <i class="ai ai-arxiv"></i>
 </span>
@@ -130,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 </span>
 <!-- Video Link. -->
 <span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="https://drive.google.com/file/d/1XTDJ-G4aIvoBlMqqecftmqVNalBPz_Mz/view?usp=sharing">
+<a class="external-link button is-normal is-rounded is-dark" href="https://drive.google.com/file/d/1cCciWvyt7XS8iFLr3a_5pP9KirKLQQF7/view?usp=sharing">
 <span class="icon">
 <i class="fab fa-youtube"></i>
 </span>
@@ -139,22 +161,14 @@ h1, h2, h3, h4, h5, h6 {
 </span>
 <!-- Code Link. -->
 <span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="">
+<a class="external-link button is-normal is-rounded is-dark" href="https://github.com/purdue-mars/manifeel">
 <span class="icon">
 <i class="fab fa-github"></i>
 </span>
-<span>Code (Coming Soon)</span>
+<span>Code</span>
 </a>
 </span>
-<!-- Dataset Link. -->
-<span class="link-block">
-<a class="external-link button is-normal is-rounded is-dark" href="">
-<span class="icon">
-<i class="far fa-images"></i>
-</span>
-<span>Data (Coming Soon)</span>
-</a>
-</span></div>
+</div>
 </div>
 </div>
 </div>
@@ -165,16 +179,14 @@ h1, h2, h3, h4, h5, h6 {
 <div class="container is-max-desktop">
 <!-- Abstract. -->
 <div class="columns is-centered has-text-centered">
-<div class="column is-four-fifths">
+<div class="column is-full">
 <h2 class="title is-3">Abstract</h2>
-<div class="content has-text-centered">
-<img alt="First Page Image" id="teaser" src="./static/images/Figure1.jpg" width="100%"/>
 <div class="content has-text-justified">
 <br>
 <p>
             ManiFeel, a reproducible and scalable simulation benchmark for studying supervised visuotactile manipulation policies across a diverse set of tasks and scenarios. ManiFeel presents a comprehensive benchmark suite spanning a diverse set of manipulation tasks, evaluating various policies, input modalities, and tactile representation methods. Through
             extensive experiments, our analysis reveals key factors that influence supervised visuotactile policy learning, identifies the types of tasks where tactile sensing is most beneficial, and highlights promising directions for future research in visuotactile policy learning. ManiFeel aims to establish a reproducible benchmark for
-            supervised visuotactile policy learning, supporting progress in visuotactile manipulation and perception. To facilitate future research and ensure reproducibility, we will release our codebase, datasets, training logs, and pretrained checkpoints.
+            supervised visuotactile policy learning, supporting progress in visuotactile manipulation and perception.
           </p>
 </div>
 </div>
@@ -185,458 +197,557 @@ h1, h2, h3, h4, h5, h6 {
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Tactile Reactive Experiments</h2>
-        <div class="content has-text-justified">
-          <p>
-            We evaluate visuotactile and vision-only policies in a real-world tactile sorting task.
-            The robot must distinguish between two visually similar objects—a table tennis ball and a golf ball—and place them into designated bowls.
-          </p>
-          <p>
-            Under human disturbances during rollouts, the visuotactile policy demonstrates adaptive behavior:
-            when a ball is removed, the robot detects the loss and actively re-initiates the search.
-            In contrast, the vision-only policy fails to respond and cannot recover.
-          </p>
-        </div>
 
-        <div class="columns" style="margin-top: 2rem;">
-          <div class="column">
-            <div class="content has-text-centered">
-              <h3 class="title is-5"><span class="hl">Visuotactile</span></h3>
-              <video id="ReactiveVisuotactile" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/Visuotactile_May17.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-          <div class="column">
-            <div class="content has-text-centered">
-              <h3 class="title is-5">Vision-only</h3>
-              <video id="ReactiveVision" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/Vision_May17.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">ManiFeel Benchmark: Tasks and Policy Rollouts in Simulation</h2>
         <div class="content has-text-justified">
           <p>
-            We present a diverse suite of manipulation tasks to systematically evaluate supervised visuotactile policy learning across varying sensory conditions, ranging from clear vision to visually degraded or fully occluded scenarios. 
-            The tasks are organized into six categories based on their reliance on visual and tactile feedback.
+            Here we showcase representative successful and failed rollout examples across our benchmark tasks under two visuotactile policy modalities—<span class="hl">TacRGB</span> (tactile RGB image input) and <span class="hl">TacFF</span> (tactile force-field encoding). The tasks are grouped into three categories: exploration under degraded vision, contact-rich insertion, and dexterous screwing. A <span style="color:#27ae60; font-weight:700;">✔</span> indicates a successful rollout; a <span style="color:#e53935; font-weight:700;">✘</span> indicates a failure.
           </p>
         </div>
       </div>
     </div>
 
-  <!-- Vision-Limited Manipulation Section -->
-  <div class="content has-text-left" style="margin-top: 2rem;">
-    <h3 class="title is-4 has-text-centered">Manipulation in Occluded and Low-Light Scenarios</h3>
-    <p class="has-text-justified">
-      These tasks require strong tactile sensing to handle scenarios with visual occlusion or low lighting. 
-      They highlight how tactile feedback enables robust manipulation when visual input is unreliable or unavailable.
-    </p>
-  </div>
+    <style>
+      .sim-category { margin-top: 2.75rem; }
+      .sim-category-header {
+        border-left: 4px solid var(--highlight);
+        padding-left: 0.85rem;
+        margin-bottom: 1.25rem;
+      }
+      .sim-category-header .title { margin-bottom: 0.2rem; }
+      .sim-task-block { margin-bottom: 2rem; }
+      .sim-task-name {
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.92rem;
+        color: var(--highlight-dark);
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.01em;
+      }
+      .sim-video-label {
+        text-align: center;
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+        color: #444;
+      }
+      .sim-tag-pill {
+        display: inline-block;
+        font-size: 0.7em;
+        font-weight: 600;
+        color: var(--highlight);
+        border: 1.5px solid var(--highlight);
+        border-radius: 999px;
+        padding: 0.05em 0.55em;
+        margin-left: 0.35em;
+        vertical-align: middle;
+      }
+      .sim-ok  { color: #27ae60; font-weight: 700; }
+      .sim-fail { color: #e53935; font-weight: 700; }
+      .sim-divider {
+        border: none;
+        border-top: 1px solid var(--highlight-light);
+        margin: 2rem 0 0;
+      }
+    </style>
 
-  <!-- Tactile-Augmented Policy -->
-  <div class="content has-text-left" style="margin-top: 2rem;">
-    <h4 class="title is-5 has-text-centered">
-      <span class="hl">Successful</span> Rollouts of <span class="hl">Tactile</span>-augmented Policy
-    </h4>
-  </div>
-
-  <div class="columns">
-    <div class="column">
-      <div class="content has-text-centered">
-        <h5 class="title is-6">
-          Blind Insertion<br>
-          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
-        </h5>
-        <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/blind_insertion_tactile_May19_updated.mp4" type="video/mp4" />
-        </video>
+    <!-- ===== Exploration Tasks ===== -->
+    <div class="sim-category">
+      <div class="sim-category-header">
+        <h3 class="title is-4">Exploration Tasks</h3>
+        <p class="is-size-6 has-text-grey-dark">Tasks under occluded or low-light visual conditions, where tactile feedback is key to robust manipulation.</p>
       </div>
-    </div>
 
-    <div class="column">
-      <div class="content has-text-centered">
-        <h5 class="title is-6">
-          Tactile Exploration<br>
-          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
-        </h5>
-        <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/tactile_exp_May19.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="content has-text-centered">
-        <h5 class="title is-6">
-          Tactile Sorting<br>
-          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Low-Light Vision</span>
-        </h5>
-        <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/Tac_sort_tac_May19.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </div>
-
-  <!-- Vision-Only Policy -->
-  <div class="content has-text-left" style="margin-top: 3rem;">
-    <h4 class="title is-5 has-text-centered"><span class="hl">Unsuccessful</span> Rollouts of <span class="hl">Vision</span>-only Policy</h4>
-  </div>
-
-  <div class="columns">
-    <div class="column">
-      <div class="content has-text-centered">
-        <h5 class="title is-6">
-          Blind Insertion<br>
-          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
-        </h5>
-        <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/blind_insertion_vision_May19.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="content has-text-centered">
-        <h5 class="title is-6">
-          Tactile Exploration<br>
-          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Occluded Vision</span>
-        </h5>
-        <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/tactile_exp_vis_May19.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="content has-text-centered">
-        <h5 class="title is-6">
-          Tactile Sorting<br>
-          <span class="tag is-rounded hl" style="font-size: 0.75em; margin-top: 0.25rem;">Low-Light Vision</span>
-        </h5>
-        <video autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/Tac_sort_vis_May19.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </div>
-
-
-    <!-- Contact-rich Tasks -->
-    <div class="content has-text-left" style="margin-top: 3rem;">
-      <h3 class="title is-4 has-text-centered">Contact-Rich Manipulation</h3>
-      <p class="has-text-justified">
-        These tasks represent standardized assembly and insertion scenarios that are supported by our benchmark. 
-        They help identify key challenges in visual-tactile integration and highlight the potential of visuotactile policies in complex manipulation settings.
-      </p>
-    </div>
-
-    <!-- Visuotactile Policy -->
-    <div class="content has-text-left" style="margin-top: 2rem;">
-      <h4 class="title is-5 has-text-centered">
-        <span class="hl">Successful</span> Rollouts of <span class="hl">Visuotactile</span> Policy
-      </h4>
-    </div>
-
-    <div class="columns">
-      <div class="column">
-        <div class="content has-text-centered">
-          <h5 class="title is-6">Gear Assembly</h5>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/gear_assembly.mp4" type="video/mp4" />
-          </video>
+      <!-- Ball Sorting -->
+      <div class="sim-task-block">
+        <div class="sim-task-name">
+          Ball Sorting <span class="sim-tag-pill">Low-Light Vision</span>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/exploration/ball_sorting/sorting_vistac.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-fail">✘</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/exploration/ball_sorting/sorting_tacff_fail.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
-      <div class="column">
-        <div class="content has-text-centered">
-          <h5 class="title is-6">Power Plug Insertion</h5>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/PowerPlugInsertion.mp4" type="video/mp4" />
-          </video>
+
+      <hr class="sim-divider">
+
+      <!-- Blind Insertion -->
+      <div class="sim-task-block" style="margin-top: 1.75rem;">
+        <div class="sim-task-name">
+          Blind Insertion <span class="sim-tag-pill">Occluded Vision</span>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/exploration/blind_insert/peg_box_tacrgb_4x.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/exploration/blind_insert/pegbox_ff_4x.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
-      <div class="column">
-        <div class="content has-text-centered">
-          <h5 class="title is-6">USB Insertion</h5>
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/USBInsertion.mp4" type="video/mp4" />
-          </video>
+
+      <hr class="sim-divider">
+
+      <!-- Object Search -->
+      <div class="sim-task-block" style="margin-top: 1.75rem;">
+        <div class="sim-task-name">
+          Object Search <span class="sim-tag-pill">Occluded Vision</span>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/exploration/object_search/vistac_search.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-fail">✘</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/exploration/object_search/visff_search_fail.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- ===== Insertion Tasks ===== -->
+    <div class="sim-category">
+      <div class="sim-category-header">
+        <h3 class="title is-4">Insertion Tasks</h3>
+        <p class="is-size-6 has-text-grey-dark">Contact-rich assembly and insertion tasks requiring precise force control and tactile perception.</p>
+      </div>
+
+      <!-- Gear Assembly -->
+      <div class="sim-task-block">
+        <div class="sim-task-name">Gear Assembly</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-fail">✘</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/gear/gear_tacrgb_fail.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/gear/gear_tacff.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sim-divider">
+
+      <!-- Peg Insertion -->
+      <div class="sim-task-block" style="margin-top: 1.75rem;">
+        <div class="sim-task-name">Peg Insertion</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-fail">✘</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/peg/peg_tacrgb_fail.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/peg/peg_tacff.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sim-divider">
+
+      <!-- Power Plug Insertion -->
+      <div class="sim-task-block" style="margin-top: 1.75rem;">
+        <div class="sim-task-name">Power Plug Insertion</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-fail">✘</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/plug/power_plug_vistac_fail.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/plug/power_plug_tacff.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sim-divider">
+
+      <!-- USB Insertion -->
+      <div class="sim-task-block" style="margin-top: 1.75rem;">
+        <div class="sim-task-name">USB Insertion</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-fail">✘</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/usb/usb_tacrgb_fail.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/insertion/usb/usb_tacff.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Screwing Tasks ===== -->
+    <div class="sim-category">
+      <div class="sim-category-header">
+        <h3 class="title is-4">Screwing Tasks</h3>
+        <p class="is-size-6 has-text-grey-dark">Dexterous rotational manipulation tasks requiring sustained contact and fine motor control.</p>
+      </div>
+
+      <!-- Bulb -->
+      <div class="sim-task-block">
+        <div class="sim-task-name">Bulb Screwing</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/screwing/bulb/bulb_rgb_2x.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/screwing/bulb/bulb_ff_2x.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sim-divider">
+
+      <!-- Nut -->
+      <div class="sim-task-block" style="margin-top: 1.75rem;">
+        <div class="sim-task-name">Nut Screwing</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/screwing/nut/nut_rgb_2x.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+            <video autoplay muted loop playsinline controls width="100%">
+              <source src="./static/new_videos/sim/screwing/nut/nut_ff_2x.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<!-- Modality Benchmarking Table -->
+<div class="content has-text-centered" style="margin-top:2.5rem;">
+  <p style="font-weight:600; margin-bottom:0.75rem;">
+    Table 1: Success rates (mean &plusmn; std) averaged over three seeds across tasks and sensing configurations. Best in each column is <strong>bold</strong>.
+  </p>
+  <div style="overflow-x:auto; max-width:960px; margin:0 auto;">
+    <table class="table is-bordered is-striped is-hoverable" style="margin:auto; font-size:0.85rem; text-align:center; white-space:nowrap;">
+      <thead>
+        <tr>
+          <th rowspan="2" style="text-align:left; vertical-align:middle;">Sensing<br>Configuration</th>
+          <th colspan="4" style="text-align:center; border-bottom:1px solid #ccc;">Insertion</th>
+          <th colspan="2" style="text-align:center; border-bottom:1px solid #ccc;">Screwing</th>
+          <th colspan="3" style="text-align:center; border-bottom:1px solid #ccc;">Exploration</th>
+        </tr>
+        <tr>
+          <th>Peg<br>Insertion</th>
+          <th>USB<br>Insertion</th>
+          <th>Power Plug<br>Insertion</th>
+          <th>Gear<br>Assembly</th>
+          <th>Nut&ndash;bolt<br>Assembly</th>
+          <th>Bulb<br>Installation</th>
+          <th>Peg Reorientation<br>(Occluded)</th>
+          <th>Object Search<br>(Occluded)</th>
+          <th>Ball Sorting<br>(Dim)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left;">Vision only</td>
+          <td>0.14 &plusmn; 0.01</td>
+          <td>0.49 &plusmn; 0.03</td>
+          <td>0.51 &plusmn; 0.02</td>
+          <td>0.63 &plusmn; 0.02</td>
+          <td>0.80 &plusmn; 0.03</td>
+          <td>0.76 &plusmn; 0.02</td>
+          <td>0.29 &plusmn; 0.02</td>
+          <td>0.52 &plusmn; 0.04</td>
+          <td>0.57 &plusmn; 0.03</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Vision + TacRGB</td>
+          <td>0.21 &plusmn; 0.02</td>
+          <td>0.49 &plusmn; 0.02</td>
+          <td>0.51 &plusmn; 0.01</td>
+          <td>0.57 &plusmn; 0.02</td>
+          <td>0.78 &plusmn; 0.03</td>
+          <td>0.72 &plusmn; 0.04</td>
+          <td><strong>0.39 &plusmn; 0.02</strong></td>
+          <td><strong>0.69 &plusmn; 0.01</strong></td>
+          <td><strong>0.72 &plusmn; 0.02</strong></td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Vision + TacFF</td>
+          <td><strong>0.40 &plusmn; 0.02</strong></td>
+          <td><strong>0.56 &plusmn; 0.01</strong></td>
+          <td><strong>0.58 &plusmn; 0.02</strong></td>
+          <td><strong>0.66 &plusmn; 0.01</strong></td>
+          <td><strong>0.81 &plusmn; 0.03</strong></td>
+          <td><strong>0.81 &plusmn; 0.02</strong></td>
+          <td>0.28 &plusmn; 0.02</td>
+          <td>0.52 &plusmn; 0.02</td>
+          <td>0.60 &plusmn; 0.02</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Learning Curves Figure -->
+<div class="content has-text-centered" style="margin-top:2.5rem;">
+  <img src="./static/images/all_modalities.png" alt="Learning curves across 9 simulation manipulation tasks" style="max-width:900px; width:100%; margin-bottom:1rem;" />
+  <div class="content has-text-justified" style="max-width:900px; margin:auto;">
+    <p>
+      Learning curves comparing the three different sensing configurations
+      (i.e., Vision-only, Vision + TacRGB, and Vision + TacFF) across 9 simulation
+      manipulation tasks. Each plot shows success rates over training epochs.
+    </p>
+  </div>
+</div>
+</section>
+
+
 <section class="section">
   <div class="container is-max-desktop">
+
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Real-World Policy Rollouts</h2>
-        <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
-          Performance Under Varying Lighting Conditions in Tactile Sorting
-        </h3>
         <div class="content has-text-justified">
           <p>
-            We evaluate the effectiveness of visuotactile and vision-only policies under different lighting conditions in a real-world tactile sorting task.
-            The robot must distinguish between two visually similar objects—a table tennis ball and a golf ball—and place them into the correct target bowls.
-            Please refer to our paper for detailed results.
+            We transfer policies trained in simulation to a real robot and evaluate them on three tasks:
+            ball sorting under varying lighting, bulb screwing, and gear assembly.
+            We compare <span class="hl">TacRGB</span> and <span class="hl">TacFF</span> visuotactile policies against a vision-only baseline.
+            A <span style="color:#27ae60; font-weight:700;">✔</span> indicates a successful rollout; a <span style="color:#e53935; font-weight:700;">✘</span> indicates a failure.
           </p>
         </div>
-
-        <!-- Normal Light Rollouts -->
-        <div class="content has-text-centered" style="margin-top: 2rem;">
-          <h4 class="title is-5">Normal Lighting</h4>
-          <!-- Tabs for Normal Lighting Rollouts -->
-          <div class="tabs is-toggle is-centered" style="margin-bottom: 0;">
-            <ul id="normal-tabs">
-              <li class="is-active" data-tab="normal-vt">
-          <a href="javascript:void(0);">
-            Visuotactile Policy Rollouts <span class="tag is-success" style="margin-left: 0.5em;">13/15</span>
-          </a>
-              </li>
-              <li data-tab="normal-vo">
-          <a href="javascript:void(0);">
-            Vision-only Policy Rollouts <span class="tag is-warning" style="margin-left: 0.5em;">5/15</span>
-          </a>
-              </li>
-            </ul>
-          </div>
-          <div id="normal-vt" class="tab-content">
-            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.5em;">
-          <span class="hl">Visuotactile</span> Policy Rollouts
-              </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
-          Success Rate: <span class="hl">13/15</span>
-              </p>
-            </div>
-            <video autoplay muted loop playsinline width="100%">
-              <source src="./static/videos/vistac_nomal_May18.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div id="normal-vo" class="tab-content is-hidden">
-            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.5em;">
-          Vision-only Policy Rollouts
-              </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
-          Success Rate: <span class="hl">5/15</span>
-              </p>
-            </div>
-            <video autoplay muted loop playsinline width="100%">
-              <source src="./static/videos/vision_nomal_May18.mp4" type="video/mp4">
-            </video>
-          </div>
-          <script>
-            // Tabs for Normal Lighting Rollouts
-            document.querySelectorAll('#normal-tabs li').forEach(tab => {
-              tab.addEventListener('click', function() {
-          document.querySelectorAll('#normal-tabs li').forEach(t => t.classList.remove('is-active'));
-          document.getElementById('normal-vt').classList.add('is-hidden');
-          document.getElementById('normal-vo').classList.add('is-hidden');
-          tab.classList.add('is-active');
-          document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
-              });
-            });
-          </script>
-
-        <!-- Dim Light Rollouts -->
-        <div class="content has-text-centered" style="margin-top: 3rem;">
-          <h4 class="title is-5">Dim Lighting</h4>
-          <!-- Tabs for Dim Lighting Rollouts -->
-          <div class="tabs is-toggle is-centered" style="margin-bottom: 0;">
-            <ul id="dim-tabs">
-              <li class="is-active" data-tab="dim-vt">
-          <a href="javascript:void(0);">
-            Visuotactile Policy Rollouts <span class="tag is-success" style="margin-left: 0.5em;">5/15</span>
-          </a>
-              </li>
-              <li data-tab="dim-vo">
-          <a href="javascript:void(0);">
-            Vision-only Policy Rollouts <span class="tag is-warning" style="margin-left: 0.5em;">1/15</span>
-          </a>
-              </li>
-            </ul>
-          </div>
-          <div id="dim-vt" class="tab-content">
-            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.5em;">
-          <span class="hl">Visuotactile</span> Policy Rollouts
-              </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
-          Success Rate: <span class="hl">5/15</span>
-              </p>
-            </div>
-            <video autoplay muted loop playsinline width="100%">
-              <source src="./static/videos/vistac_dim.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div id="dim-vo" class="tab-content is-hidden">
-            <div style="margin-top: 1.5em; margin-bottom: 0.25em;">
-              <h5 class="title is-6" style="margin-bottom: 0.5em;">
-          Vision-only Policy Rollouts
-              </h5>
-              <p class="has-text-grey has-text-centered is-size-6" style="margin-bottom: 1em; margin-top: 0.25em;">
-          Success Rate: <span class="hl">1/15</span>
-              </p>
-            </div>
-            <video autoplay muted loop playsinline width="100%">
-              <source src="./static/videos/vision_dim.mp4" type="video/mp4">
-            </video>
-          </div>
-          <script>
-            // Tabs for Dim Lighting Rollouts
-            document.querySelectorAll('#dim-tabs li').forEach(tab => {
-              tab.addEventListener('click', function() {
-          document.querySelectorAll('#dim-tabs li').forEach(t => t.classList.remove('is-active'));
-          document.getElementById('dim-vt').classList.add('is-hidden');
-          document.getElementById('dim-vo').classList.add('is-hidden');
-          tab.classList.add('is-active');
-          document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
-              });
-            });
-          </script>
-
-<!-- Failure Cases -->
-<section class="section" id="failures">
-  <div class="container is-max-desktop">
-    <h2 class="title is-4 has-text-centered">Failure Cases</h2>
-    <p class="has-text-justified" style="margin-bottom: 2rem;">
-      Failure cases in the visuotactile policy often stem from controller overshoot—although the object is correctly identified, it may be dropped slightly outside the target bowl. 
-      In contrast, due to the absence of tactile feedback, the vision-only policy frequently misidentifies the object or fails to determine the correct placement location, resulting in incorrect sorting.
-    </p>
-
-    <!-- Tabs for Visuotactile -->
-    <h3 class="title is-5">Visuotactile Failures</h3>
-    <style>
-      /* Custom tab styles to match the site theme */
-      .tabs.is-toggle li.is-active a {
-      background-color: var(--highlight-dark);
-      color: #fff !important;
-      border-color: var(--highlight-dark) !important;
-      }
-      .tabs.is-toggle li a {
-      background-color: var(--highlight-light);
-      color: var(--highlight-dark);
-      border-color: var(--highlight-light);
-      transition: background 0.2s, color 0.2s;
-      }
-      .tabs.is-toggle li:not(.is-active) a:hover {
-      background-color: var(--highlight);
-      color: #fff;
-      }
-      .tabs.is-toggle ul {
-      border-bottom: none;
-      }
-      .tabs.is-toggle li {
-      margin-bottom: 0;
-      }
-    </style>
-    <div class="tabs is-toggle is-centered">
-      <ul id="vt-tabs">
-      <li class="is-active" data-tab="vt1"><a href="javascript:void(0);">Ball Bounced Off Bowl</a></li>
-      <li data-tab="vt2"><a href="javascript:void(0);">Off-Target Placement</a></li>
-      </ul>
-    </div>
-    <div id="vt1" class="tab-content">
-      <p class="has-text-grey has-text-centered is-size-6">Normal Lighting</p>
-      <video autoplay muted loop playsinline width="100%">
-      <source src="./static/videos/vistac_normal_f2.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div id="vt2" class="tab-content is-hidden">
-      <p class="has-text-grey has-text-centered is-size-6">Dim Lighting</p>
-      <video autoplay muted loop playsinline width="100%">
-      <source src="./static/videos/vistac_dim_f1.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <!-- Tabs for Vision-only -->
-    <h3 class="title is-5" style="margin-top: 2rem;">Vision-only Failures</h3>
-    <div class="tabs is-toggle is-centered">
-      <ul id="vo-tabs">
-      <li class="is-active" data-tab="vo1"><a href="javascript:void(0);">Incomplete Placement</a></li>
-      <li data-tab="vo2"><a href="javascript:void(0);">Incorrect Placement</a></li>
-      </ul>
-    </div>
-    <div id="vo1" class="tab-content" style="background-color: var(--background);">
-      <p class="has-text-grey has-text-centered is-size-6">Normal Lighting</p>
-      <video autoplay muted loop playsinline width="100%">
-      <source src="./static/videos/vision_normal_f3.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div id="vo2" class="tab-content is-hidden" style="background-color: var(--background);">
-      <p class="has-text-grey has-text-centered is-size-6">Dim Lighting</p>
-      <video autoplay muted loop playsinline width="100%">
-      <source src="./static/videos/vision_dim_f3.mp4" type="video/mp4">
-      </video>
-    </div>
-    </div>
-
-    <script>
-    // Visuotactile tabs
-    document.querySelectorAll('#vt-tabs li').forEach(tab => {
-      tab.addEventListener('click', function() {
-      document.querySelectorAll('#vt-tabs li').forEach(t => t.classList.remove('is-active'));
-      document.getElementById('vt1').classList.add('is-hidden');
-      document.getElementById('vt2').classList.add('is-hidden');
-      tab.classList.add('is-active');
-      document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
-      });
-    });
-
-    // Vision-only tabs
-    document.querySelectorAll('#vo-tabs li').forEach(tab => {
-      tab.addEventListener('click', function() {
-      document.querySelectorAll('#vo-tabs li').forEach(t => t.classList.remove('is-active'));
-      document.getElementById('vo1').classList.add('is-hidden');
-      document.getElementById('vo2').classList.add('is-hidden');
-      tab.classList.add('is-active');
-      document.getElementById(tab.getAttribute('data-tab')).classList.remove('is-hidden');
-      });
-    });
-    </script>
-  </section>
-
       </div>
     </div>
+
+    <!-- ===== Ball Sorting ===== -->
+    <div class="sim-category">
+      <div class="sim-category-header">
+        <h3 class="title is-4">Ball Sorting</h3>
+        <p class="is-size-6 has-text-grey-dark">The robot distinguishes a table tennis ball from a golf ball and places each into the correct bowl, tested under normal and dim lighting.</p>
+      </div>
+
+      <!-- Normal Lighting -->
+      <div class="sim-task-block">
+        <div class="sim-task-name">Normal Lighting</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-ok">✔</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/ball/visuotactile_ball_normal_4x_cropped.mp4" type="video/mp4" />
+              </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-fail">✘</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/ball/visff_ball6_normal_fail_4x_cropped.mp4" type="video/mp4" />
+              </video>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sim-divider">
+
+      <!-- Dim Lighting -->
+      <div class="sim-task-block" style="margin-top: 1.75rem;">
+        <div class="sim-task-name">Dim Lighting</div>
+        <div class="columns">
+          <div class="column">
+            <div class="sim-video-label">TacRGB &nbsp;<span class="sim-ok">✔</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/ball/visuotactile_ball_dim_4x_cropped.mp4" type="video/mp4" />
+              </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">TacFF &nbsp;<span class="sim-fail">✘</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/ball/visff_ball_dim_fail_4x_cropped.mp4" type="video/mp4" />
+              </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Bulb Screwing ===== -->
+    <div class="sim-category">
+      <div class="sim-category-header">
+        <h3 class="title is-4">Bulb Screwing</h3>
+        <p class="is-size-6 has-text-grey-dark">The robot must screw a bulb to a precise torque. TacFF achieves a snug fit; without tactile feedback, the vision-only policy either over-tightens or under-tightens.</p>
+      </div>
+      <div class="sim-task-block">
+        <div class="columns">
+          <div class="column">
+              <div class="sim-video-label">TacFF — Snug Fit &nbsp;<span class="sim-ok">✔</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/bulb/tacff_bulb_snug_fit_4x_cropped3.mp4" type="video/mp4" />
+              </video>
+          </div>
+          <div class="column">
+              <div class="sim-video-label">Vision-only — Over-tight &nbsp;<span class="sim-fail">✘</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/bulb/vision_bulb_over_tight_4x_fail_cropped3.mp4" type="video/mp4" />
+              </video>
+          </div>
+          <div class="column">
+              <div class="sim-video-label">Vision-only — Under-tight &nbsp;<span class="sim-fail">✘</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/bulb/vision_bulb_under_tight_4x_fail_cropped3.mp4" type="video/mp4" />
+              </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Gear Assembly ===== -->
+    <div class="sim-category">
+      <div class="sim-category-header">
+        <h3 class="title is-4">Gear Assembly</h3>
+        <p class="is-size-6 has-text-grey-dark">The robot assembles a gear onto a shaft, requiring precise contact and force sensing.</p>
+      </div>
+      <div class="sim-task-block">
+        <div class="columns">
+          <div class="column">
+              <div class="sim-video-label">TacFF &nbsp;<span class="sim-ok">✔</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/gear/tacff_gear_2x_cropped.mp4" type="video/mp4" />
+              </video>
+          </div>
+          <div class="column">
+            <div class="sim-video-label">Vision-only &nbsp;<span class="sim-fail">✘</span></div>
+              <video autoplay muted loop playsinline controls width="100%">
+                <source src="./static/new_videos/real/gear/vision_gear_x2_fail_cropped.mp4" type="video/mp4" />
+              </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<!-- Compare Figure -->
+<div class="content has-text-centered" style="margin-top:2.5rem; margin-bottom:2.5rem;">
+  <img src="./static/images/compare.png" alt="Success rates for real and simulated environments" style="max-width:900px; width:100%; margin-bottom:1rem;" />
+  <div class="content has-text-justified" style="max-width:900px; margin:auto;">
+    <p>
+      Success rates for real and simulated environments across different sensing configurations and scenarios.
+      The overall trends observed in simulation are consistently reproduced in the real world, demonstrating that
+      ManiFeel's task suite captures representative and transferable manipulation behaviors.
+    </p>
+  </div>
+</div>
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Sim-to-Real Comparison: TacSL Simulator vs. GelSight Mini</h2>
-        
+        <h2 class="title is-3 has-text-centered">Tactile Reactive Experiments</h2>
         <div class="content has-text-justified">
           <p>
-            We compare tactile images generated in the TacSL simulator with those captured using the GelSight Mini sensor.
-            The examples below feature several representative objects from the ManiFeel benchmark and demonstrate the visual and structural similarities between simulated and real tactile feedback.
+            We evaluate visuotactile and vision-only policies in a real-world tactile sorting task under human disturbances.
+            The robot must distinguish between two visually similar objects—a table tennis ball and a golf ball—and place them into designated bowls.
+            When a ball is removed mid-rollout, the visuotactile policy detects the loss and actively re-initiates the search,
+            while the vision-only policy fails to respond and cannot recover.
+            We test under both normal and dim lighting conditions.
           </p>
         </div>
-        
-        <div class="has-text-centered" style="margin-top: 2rem;">
-          <figure class="image is-fullwidth" style="max-width: 100%;">
-            <img src="./static/images/Fig2.png" alt="TacSL Simulator vs. GelSight Mini" style="width: 100%; height: auto;">
-          </figure>
+
+        <!-- Normal Lighting -->
+        <div style="margin-top: 2rem;">
+          <div class="sim-category-header">
+            <h3 class="title is-4">Normal Lighting</h3>
+          </div>
+          <div class="columns">
+            <div class="column">
+                <div class="sim-video-label">Visuotactile &nbsp;<span class="sim-ok">✔</span></div>
+                <video autoplay muted loop playsinline controls width="100%">
+                  <source src="./static/new_videos/real/ball/tactile_reactive/tactile_reactive_normal_2x_cropped.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="column">
+                <div class="sim-video-label">Vision-only &nbsp;<span class="sim-fail">✘</span></div>
+                <video autoplay muted loop playsinline controls width="100%">
+                  <source src="./static/new_videos/real/ball/tactile_reactive/vision_reactive_normal_2x_fail_cropped.mp4" type="video/mp4" />
+                </video>
+            </div>
+          </div>
         </div>
+
+        <!-- Dim Lighting -->
+        <div style="margin-top: 2rem;">
+          <div class="sim-category-header">
+            <h3 class="title is-4">Dim Lighting</h3>
+          </div>
+          <div class="columns">
+            <div class="column">
+                <div class="sim-video-label">Visuotactile &nbsp;<span class="sim-ok">✔</span></div>
+                <video autoplay muted loop playsinline controls width="100%">
+                  <source src="./static/new_videos/real/ball/tactile_reactive/tactile_reactive_dim_4x_cropped.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="column">
+                <div class="sim-video-label">Vision-only &nbsp;<span class="sim-fail">✘</span></div>
+                <video autoplay muted loop playsinline controls width="100%">
+                  <source src="./static/new_videos/real/ball/tactile_reactive/vision_reactive_dim_4x_fail_cropped.mp4" type="video/mp4" />
+                </video>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</section>
+
+
+
 <section class="section">
 <div class="container is-max-desktop">
 <div class="columns is-centered">
